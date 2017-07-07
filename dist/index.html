@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Opal Test</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_orange-pink.min.css" />
+		<style>
+			/* Obviously this would sit in a separate CSS file in real production app */
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			select {
+				height: 36px;
+				min-width: 128px;
+				margin: 0 10px;		
+			}
+			.warning {
+				display: inline-block;
+				background: red;
+				color: white;
+				padding: 12px;
+				margin-top: 16px;
+			}
+			section {
+				margin-bottom: 4em;
+			}
+			.mdl-chip {
+				margin: 10px 5px;
+				vertical-align: baseline;
+			}
+			.editing {
+				box-shadow: 0 0 0 2px rgb(255,64,129) inset;
+			}
+			
+		</style>
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+</head>
+
+<body>
+	<div id="appContainer"></div>
+	<script src="app.js"></script>
+</body>
+
+</html>
