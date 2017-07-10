@@ -8,7 +8,7 @@ import ManagerAlerter from './ManagerAlerter';
 const App = () => (
 	<div>
 		<AddOrderForm />
-    <FilterableOrders />
+		<FilterableOrders />
 		<OrderSelector />
 		<ManagerAlerter />
 	</div>

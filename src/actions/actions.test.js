@@ -8,10 +8,9 @@ global.Date = jest.fn()
 describe('actions', () => {
 
 	it('should create an action to add an order', () => {
-	
+
 		const contentExample = 'Burger'
-		const newDate = new Date();
-	
+
 		const expectedAction = {
 			type: actionTypes.ADD_ORDER,
 			id: 0,
@@ -21,8 +20,7 @@ describe('actions', () => {
 		expect(actions.addOrder(contentExample)).toEqual(expectedAction)
   })
 
-	
-  it('should create an action to edit an order', () => {
+	it('should create an action to edit an order', () => {
 		const id = 0;
 		const updatedContent = 'Lobster'
 		const expectedAction = {
@@ -32,16 +30,16 @@ describe('actions', () => {
 		}
 		expect(actions.editOrder(id, updatedContent)).toEqual(expectedAction)
   })
-  
+
 	it('should create an action to delete an order', () => {
 		const id = 0;
-			const expectedAction = {
+		const expectedAction = {
 			type: actionTypes.DELETE_ORDER,
 			id: 0,
 		}
 		expect(actions.deleteOrder(id)).toEqual(expectedAction)
 	})
-	
+
 	it('should create an action to set display filter', () => {
 		const testFilter = 'DISPLAY_COMPLETED';
 		const expectedAction = {
@@ -50,7 +48,7 @@ describe('actions', () => {
 		}
 		expect(actions.setDisplayFilter(testFilter)).toEqual(expectedAction)
 	})
-	
+
 	it('should create an action to toggle completed status on order', () => {
 		const id = 0;
 		const expectedAction = {
@@ -59,5 +57,4 @@ describe('actions', () => {
 		}
 		expect(actions.toggleCompleted(id)).toEqual(expectedAction)
 	})
-
 })

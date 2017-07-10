@@ -5,9 +5,9 @@ import OrderList from '../components/OrderList'
 
 
 let ManagerAlerter = ({orders}) => (
-	<section> 
-	{(orders.filter(order => !order.completed).length > 4) ? 
-		<span className="warning">Manager Alert! All hands to the pumps!</span> : 
+	<section>
+		{(orders.filter(order => !order.completed).length > 4) ?
+		<span className="warning">Manager Alert! All hands to the pumps!</span> :
 		<span>Open Order Count: {orders.filter(order => !order.completed).length}</span>}
 	</section>
 )

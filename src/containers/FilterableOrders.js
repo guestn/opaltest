@@ -5,7 +5,7 @@ import OrderList from '../components/OrderList'
 const getOrders = (orders, filter) => {
 	switch (filter) {
 		case 'DISPLAY_ALL':
-      return orders
+			return orders
 		case 'DISPLAY_OPEN':
 			return orders.filter(order => !order.completed)
 		case 'DISPLAY_COMPLETED':

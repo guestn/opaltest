@@ -8,24 +8,24 @@ import { addOrder } from '../actions/actions';
 
 export const AddOrderForm = ({ dispatch }) => {
 	let input;
-	
+
 	return (
-    <section>
+		<section>
 			<form
 				onSubmit={e => {
 					e.preventDefault()
-          if (!input.value) {
+					if (!input.value) {
 						return
-          }
+					}
 					dispatch(addOrder(input.value))
 					input.value = "Burger"
 				}}
-      >
+			>
 				<label htmlFor="menuSelector">Select Order</label>
-				<select 
-        	id="menuSelector"
-        	ref={node => { input = node}}
-        >
+				<select
+					id="menuSelector"
+					ref={node => { input = node}}
+				>
 					{ menuItems.map((item) =>
 						<option value={item} key={item}>{item}</option>
 					)}
@@ -35,7 +35,7 @@ export const AddOrderForm = ({ dispatch }) => {
 				</button>
 			</form>
 		</section>
-  )
+	)
 }
 const ConnectedAddOrderForm = connect()(AddOrderForm);
 

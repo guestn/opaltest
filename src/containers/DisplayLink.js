@@ -5,16 +5,16 @@ import { setDisplayFilter } from '../actions/actions'
 let DisplayLink  = ({ active, children, onClick }) => {
   if (active) {
     return (
-    	<span className="mdl-chip mdl-color--pink">
-    		<span className="mdl-chip__text">
-					{children}
-				</span>
-			</span>
-		)
+      <span className="mdl-chip mdl-color--pink">
+        <span className="mdl-chip__text">
+          {children}
+        </span>
+      </span>
+    )
   }
   return (
-    <a href="#" 
-    	className="mdl-chip"
+    <a href="#"
+      className="mdl-chip"
       onClick={e => {
         e.preventDefault()
         onClick()
